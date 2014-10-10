@@ -1,0 +1,48 @@
+{
+  "package": {
+    "description": "Test markdown description."
+  },
+  "data": {
+    "function": {
+      "test-func-markdown": {
+        "description": "Test: function markdown.\n",
+        "context": {
+          "type": "function",
+          "name": "test-func-markdown"
+        },
+        "author": [
+          "Hugo Giraudel"
+        ],
+        "todo": [
+          "Todo description"
+        ],
+        "parameters": [
+          {
+            "type": "String",
+            "name": "one",
+            "description": "Param one description"
+          },
+          {
+            "type": "String",
+            "name": "two",
+            "description": "Param two description"
+          }
+        ],
+        "throws": [
+          "Throws description"
+        ],
+        "returns": [
+          {
+            "type": "*",
+            "description": "Returns description"
+          }
+        ],
+        "content": [
+          {
+            "description": "This should be parsed as Markdown"
+          }
+        ]
+      }
+    }
+  }
+}

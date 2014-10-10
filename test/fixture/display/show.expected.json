@@ -1,0 +1,57 @@
+{
+  "view": {
+    "display": {
+      "access": [
+        "public",
+        "private"
+      ],
+      "alias": true,
+      "watermark": true
+    },
+    "theme": "default"
+  },
+  "data": {
+    "function": {
+      "test-func-public": {
+        "description": "Test: function public.\n",
+        "context": {
+          "type": "function",
+          "name": "test-func-public"
+        },
+        "access": [
+          "public"
+        ],
+        "aliased": [
+          "test-func-alias"
+        ],
+        "display": true
+      },
+      "test-func-private": {
+        "description": "Test: function private.\n",
+        "context": {
+          "type": "function",
+          "name": "test-func-private"
+        },
+        "access": [
+          "private"
+        ],
+        "display": true
+      },
+      "test-func-alias": {
+        "description": "Test: function alias.\n",
+        "context": {
+          "type": "function",
+          "name": "test-func-alias"
+        },
+        "alias": [
+          "test-func-public"
+        ],
+        "access": [
+          "public"
+        ],
+        "display": true
+      }
+    },
+    "count": 3
+  }
+}

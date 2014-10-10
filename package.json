@@ -1,0 +1,29 @@
+{
+  "name": "sassdoc-extra",
+  "description": "SassDoc's Toolbelt",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SassDoc/sassdoc-extra.git"
+  },
+  "keywords": [
+    "sassdoc",
+    "index",
+    "themes"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SassDoc/sassdoc-extra/issues"
+  },
+  "homepage": "http://sassdoc.com",
+  "dependencies": {
+    "marked": "^0.3.0",
+    "lodash.foreach": "^2.4.1"
+  },
+  "devDependencies": {
+    "mocha": "^1.21.4"
+  },
+  "scripts": {
+    "test": "mocha test/*.test.js"
+  }
+}
