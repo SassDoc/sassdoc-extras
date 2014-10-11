@@ -1,67 +1,45 @@
 {
    "package":{
-      "description":"Test markdown description.",
-      "htmlDescription":"<p>Test markdown description.</p>\n"
+      "description":"<p>Test markdown description.</p>\n"
    },
    "data":{
       "function":{
          "test-func-markdown":{
-            "description":"Test: function markdown.\n",
+            "description":"<p>Test: function markdown.</p>\n",
             "context":{
                "type":"function",
                "name":"test-func-markdown"
             },
             "author":[
-               "Hugo Giraudel"
+               "<p>Hugo Giraudel</p>\n"
             ],
             "todo":[
-               "Todo description"
+               "<p>Todo description</p>\n"
             ],
-            "parameters":[
+            "parameter":[
                {
                   "type":"String",
                   "name":"one",
-                  "description":"Param one description",
-                  "htmlDescription":"<p>Param one description</p>\n"
+                  "description":"<p>Param one description</p>\n"
                },
                {
                   "type":"String",
                   "name":"two",
-                  "description":"Param two description",
-                  "htmlDescription":"<p>Param two description</p>\n"
+                  "description":"<p>Param two description</p>\n"
                }
             ],
-            "throws":[
-               "Throws description"
+            "throw":[
+               "<p>Throws description</p>\n"
             ],
-            "returns":[
+            "return":[
                {
                   "type":"*",
-                  "description":"Returns description",
-                  "htmlDescription":"<p>Returns description</p>\n"
+                  "description":"<p>Returns description</p>\n"
                }
             ],
             "content":[
                {
-                  "description":"This should be parsed as Markdown",
-                  "htmlDescription":"<p>This should be parsed as Markdown</p>\n"
-               }
-            ],
-            "htmlDescription":"<p>Test: function markdown.</p>\n",
-            "htmlAuthor":[
-               "<p>Hugo Giraudel</p>\n"
-            ],
-            "htmlThrows":[
-               "<p>Throws description</p>\n"
-            ],
-            "htmlTodo":[
-               "<p>Todo description</p>\n"
-            ],
-            "htmlReturns":[
-               {
-                  "type":"*",
-                  "description":"Returns description",
-                  "htmlDescription":"<p>Returns description</p>\n"
+                  "description":"<p>This should be parsed as Markdown</p>\n"
                }
             ]
          }

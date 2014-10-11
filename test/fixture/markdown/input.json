@@ -16,7 +16,7 @@
         "todo": [
           "Todo description"
         ],
-        "parameters": [
+        "parameter": [
           {
             "type": "String",
             "name": "one",
@@ -28,10 +28,10 @@
             "description": "Param two description"
           }
         ],
-        "throws": [
+        "throw": [
           "Throws description"
         ],
-        "returns": [
+        "return": [
           {
             "type": "*",
             "description": "Returns description"

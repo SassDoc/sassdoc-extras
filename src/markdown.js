@@ -5,7 +5,7 @@ var marked = require('marked');
 module.exports = function (ctx) {
 
   if (ctx.package && ctx.package.description) {
-    ctx.package.htmlDescription = marked(ctx.package.description);
+    ctx.package.description = marked(ctx.package.description);
   }
 
   /**
@@ -20,10 +20,10 @@ module.exports = function (ctx) {
    * Return a function that will apply `fn` on `obj[key]` to generate
    * `obj[newKey]`.
    */
-  function applyKey(fn, key, newKey) {
+  function applyKey(fn, key) {
     return function (obj) {
       if (key in obj) {
-        obj[newKey] = fn(obj[key]);
+        obj[key] = fn(obj[key]);
       }
 
       return obj;
@@ -35,48 +35,48 @@ module.exports = function (ctx) {
       var item = ctx.data[type][name];
 
       if ('description' in item) {
-        item.htmlDescription = marked(item.description);
+        item.description = marked(item.description);
       }
 
       if ('author' in item) {
-        item.htmlAuthor = item.author.map(md);
+        item.author = item.author.map(md);
       }
 
-      if ('throws' in item) {
-        item.htmlThrows = item.throws.map(md);
+      if ('throw' in item) {
+        item.throw = item.throw.map(md);
       }
 
       if ('todo' in item) {
-        item.htmlTodo = item.todo.map(md);
+        item.todo = item.todo.map(md);
       }
 
-      if ('returns' in item) {
-        item.htmlReturns = item.returns.map(
-          applyKey(md, 'description', 'htmlDescription')
+      if ('return' in item) {
+        item.return = item.return.map(
+          applyKey(md, 'description')
         );
       }
 
       if ('example' in item) {
         item.example = item.example.map(
-          applyKey(md, 'description', 'htmlDescription')
+          applyKey(md, 'description')
         );
       }
 
-      if ('parameters' in item) {
-        item.parameters = item.parameters.map(
-          applyKey(md, 'description', 'htmlDescription')
+      if ('parameter' in item) {
+        item.parameter = item.parameter.map(
+          applyKey(md, 'description')
         );
       }
 
-      if ('prop' in item) {
-        item.prop = item.prop.map(
-          applyKey(md, 'description', 'htmlDescription')
+      if ('property' in item) {
+        item.property = item.property.map(
+          applyKey(md, 'description')
         );
       }
 
       if ('content' in item) {
         item.content = item.content.map(
-          applyKey(md, 'description', 'htmlDescription')
+          applyKey(md, 'description')
         );
       }
     }
