@@ -6,7 +6,7 @@ var assert = require('assert');
 describe('#flat', function () {
   var flat = require('../src/flat');
 
-  it.only('should result in a flat array', function () {
+  it('should result in a flat array', function () {
     var data = {
       'function': {
         'name': {
