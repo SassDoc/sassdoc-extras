@@ -83,6 +83,12 @@ module.exports = function (ctx) {
           applyKey(md, 'description')
         );
       }
+
+      if ('since' in item) {
+        item.since = item.content.map(
+          applyKey(md, 'description')
+        );
+      }
     }
   }
 };
