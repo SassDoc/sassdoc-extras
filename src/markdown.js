@@ -50,6 +50,10 @@ module.exports = function (ctx) {
         item.todo = item.todo.map(md);
       }
 
+      if ('deprecated' in item) {
+        item.deprecated = item.deprecated.map(md);
+      }
+
       if ('return' in item) {
         item.return = item.return.map(
           applyKey(md, 'description')
