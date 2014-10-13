@@ -38,6 +38,14 @@ module.exports = function (ctx) {
         item.description = marked(item.description);
       }
 
+      if ('content' in item && item.content.description) {
+        item.content.description = marked(item.content.description);
+      }
+
+      if ('return' in item && item.content.description) {
+        item.return.description = marked(item.return.description);
+      }
+
       if ('author' in item) {
         item.author = item.author.map(md);
       }
@@ -54,12 +62,6 @@ module.exports = function (ctx) {
         item.deprecated = item.deprecated.map(md);
       }
 
-      if ('return' in item) {
-        item.return = item.return.map(
-          applyKey(md, 'description')
-        );
-      }
-
       if ('example' in item) {
         item.example = item.example.map(
           applyKey(md, 'description')
@@ -74,12 +76,6 @@ module.exports = function (ctx) {
 
       if ('property' in item) {
         item.property = item.property.map(
-          applyKey(md, 'description')
-        );
-      }
-
-      if ('content' in item) {
-        item.content = item.content.map(
           applyKey(md, 'description')
         );
       }

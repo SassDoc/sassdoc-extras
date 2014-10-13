@@ -21,16 +21,14 @@ module.exports = function (ctx) {
   eachItem(ctx.data, function (item) {
     var group = {};
 
-    item.group.forEach(function (groups) {
-      groups.forEach(function (slug) {
-        slug = slug.toLowerCase();
+    item.group.forEach(function (slug) {
+      slug = slug.toLowerCase();
 
-        if (slug in ctx.groups) {
-          group[slug] = ctx.groups[slug];
-        } else {
-          group[slug] = ctx.groups[slug] = slug;
-        }
-      });
+      if (slug in ctx.groups) {
+        group[slug] = ctx.groups[slug];
+      } else {
+        group[slug] = ctx.groups[slug] = slug;
+      }
     });
 
     item.groupName = group;

@@ -24,9 +24,7 @@
           "name": "test-func-group-undef"
         },
         "group": [
-          [
-            "undefined"
-          ]
+          "undefined"
         ],
         "access": [
           "public"
@@ -39,9 +37,7 @@
           "name": "test-func-group-foo"
         },
         "group": [
-          [
-            "foo"
-          ]
+          "foo"
         ],
         "access": [
           "public"
@@ -54,9 +50,7 @@
           "name": "test-func-group-bar"
         },
         "group": [
-          [
-            "bar"
-          ]
+          "bar"
         ],
         "access": [
           "public"

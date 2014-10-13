@@ -31,17 +31,13 @@
             "throw":[
                "<p>Throws description</p>\n"
             ],
-            "return":[
-               {
-                  "type":"*",
-                  "description":"<p>Returns description</p>\n"
-               }
-            ],
-            "content":[
-               {
-                  "description":"<p>This should be parsed as Markdown</p>\n"
-               }
-            ]
+            "return":{
+                "type":"*",
+                "description":"<p>Returns description</p>\n"
+             },
+            "content":{
+                "description":"<p>This should be parsed as Markdown</p>\n"
+             }
          }
       }
    }
