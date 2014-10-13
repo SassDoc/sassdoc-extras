@@ -42,7 +42,7 @@ module.exports = function (ctx) {
         item.content.description = marked(item.content.description);
       }
 
-      if ('return' in item && item.content.description) {
+      if ('return' in item && item.return.description) {
         item.return.description = marked(item.return.description);
       }
 

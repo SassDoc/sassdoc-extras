@@ -8,7 +8,7 @@ var eachItem = require('./eachItem');
  */
 module.exports = function (ctx) {
   var shouldBeDisplayed = function (item) {
-    var displayItemAccess = ctx.view.display.access.indexOf(item.access[0]) !== -1;
+    var displayItemAccess = ctx.view.display.access.indexOf(item.access) !== -1;
     var isAlias = item.alias;
     var displayAlias = ctx.view.display.alias;
 

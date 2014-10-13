@@ -18,9 +18,7 @@
           "type": "function",
           "name": "test-func-public"
         },
-        "access": [
-          "public"
-        ],
+        "access": "public",
         "aliased": [
           "test-func-alias"
         ]
@@ -31,9 +29,7 @@
           "type": "function",
           "name": "test-func-private"
         },
-        "access": [
-          "private"
-        ]
+        "access": "private"
       },
       "test-func-alias": {
         "description": "Test: function alias.\n",
@@ -41,12 +37,8 @@
           "type": "function",
           "name": "test-func-alias"
         },
-        "alias": [
-          "test-func-public"
-        ],
-        "access": [
-          "public"
-        ]
+        "alias": "test-func-public",
+        "access": "public"
       }
     }
   }

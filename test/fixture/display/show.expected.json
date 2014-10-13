@@ -18,9 +18,7 @@
           "type": "function",
           "name": "test-func-public"
         },
-        "access": [
-          "public"
-        ],
+        "access": "public",
         "aliased": [
           "test-func-alias"
         ],
@@ -32,9 +30,7 @@
           "type": "function",
           "name": "test-func-private"
         },
-        "access": [
-          "private"
-        ],
+        "access": "private",
         "display": true
       },
       "test-func-alias": {
@@ -43,12 +39,8 @@
           "type": "function",
           "name": "test-func-alias"
         },
-        "alias": [
-          "test-func-public"
-        ],
-        "access": [
-          "public"
-        ],
+        "alias": "test-func-public",
+        "access": "public",
         "display": true
       }
     },

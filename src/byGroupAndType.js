@@ -6,7 +6,7 @@ module.exports = function (data){
   var byGroupAndType = {};
 
   eachItem(data, function (item, type){
-    var group = item.group[0][0];
+    var group = item.group[0];
 
     if (byGroupAndType[group] === undefined) {
       byGroupAndType[group] = {};

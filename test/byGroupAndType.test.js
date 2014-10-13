@@ -10,33 +10,33 @@ describe('#byGroupAndType', function(){
       'function' : {
         'name' : {
           'name' : 'name',
-          'group' : [['test']]
+          'group' : ['test']
         },
         'name1' : {
           'name' : 'name1',
-          'group' : [['nogroup']]
+          'group' : ['nogroup']
         }
       },
       'mixin' : {
         'name' : {
           'name' : 'name',
-          'group' : [['test']]
+          'group' : ['test']
         },
         'name1' : {
           'name' : 'name1',
-          'group' : [['nogroup']]
+          'group' : ['nogroup']
         }
       }
     };
 
     var expected = {
       'nogroup' : {
-        'function' : [{'name' : 'name1', 'group' : [['nogroup']]}],
-        'mixin' : [{'name' : 'name1', 'group' : [['nogroup']]}]
+        'function' : [{'name' : 'name1', 'group' : ['nogroup']}],
+        'mixin' : [{'name' : 'name1', 'group' : ['nogroup']}]
       },
       'test' : {
-        'function' : [{'name' : 'name', 'group' : [['test']]}],
-        'mixin' : [{'name' : 'name', 'group' : [['test']]}]
+        'function' : [{'name' : 'name', 'group' : ['test']}],
+        'mixin' : [{'name' : 'name', 'group' : ['test']}]
       }
     };
 
