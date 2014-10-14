@@ -6,6 +6,7 @@
     "function": {
       "test-func-markdown": {
         "description": "Test: function markdown.\n",
+        "deprecated": "deprecated",
         "context": {
           "type": "function",
           "name": "test-func-markdown"

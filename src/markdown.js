@@ -46,6 +46,11 @@ module.exports = function (ctx) {
         item.return.description = marked(item.return.description);
       }
 
+      if ('deprecated' in item) {
+        item.deprecated = marked(item.deprecated);
+      }
+
+
       if ('author' in item) {
         item.author = item.author.map(md);
       }
@@ -56,10 +61,6 @@ module.exports = function (ctx) {
 
       if ('todo' in item) {
         item.todo = item.todo.map(md);
-      }
-
-      if ('deprecated' in item) {
-        item.deprecated = item.deprecated.map(md);
       }
 
       if ('example' in item) {
