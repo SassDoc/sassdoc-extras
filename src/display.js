@@ -17,10 +17,10 @@ module.exports = function (ctx) {
 
   ctx.data.count = 0;
 
-  eachItem(ctx.data, function (item) {
-    item.display = shouldBeDisplayed(item);
-
-    if (item.display) {
+  eachItem(ctx.data, function (item, type, name) {
+    if (!shouldBeDisplayed(item)) {
+      delete ctx.data[type][name];
+    } else {
       ctx.data.count++;
     }
   });
