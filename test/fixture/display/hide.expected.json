@@ -20,27 +20,7 @@
         "access": "public",
         "aliased": [
           "test-func-alias"
-        ],
-        "display": true
-      },
-      "test-func-private": {
-        "description": "Test: function private.\n",
-        "context": {
-          "type": "function",
-          "name": "test-func-private"
-        },
-        "access": "private",
-        "display": false
-      },
-      "test-func-alias": {
-        "description": "Test: function alias.\n",
-        "context": {
-          "type": "function",
-          "name": "test-func-alias"
-        },
-        "alias": "test-func-public",
-        "access": "public",
-        "display": false
+        ]
       }
     },
     "count": 1
