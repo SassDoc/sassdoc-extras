@@ -1,11 +1,11 @@
 'use strict';
 
-var eachItem = require('./eachItem');
-
-module.exports = function (data) {
+module.exports = function byType(data) {
   var byType = {};
 
-  eachItem(data, function (item, type) {
+  data.forEach(function (item) {
+    var type = item.context.type;
+
     if (!(type in byType)) {
       byType[type] = [];
     }

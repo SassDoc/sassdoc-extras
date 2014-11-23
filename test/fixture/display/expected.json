@@ -1,0 +1,20 @@
+{
+  "display": {
+    "access": [
+      "public"
+    ],
+    "alias": false,
+    "watermark": true
+  },
+  "data": [{
+    "description": "Test: function public.\n",
+    "context": {
+      "type": "function",
+      "name": "test-func-public"
+    },
+    "access": "public",
+    "aliased": [
+      "test-func-alias"
+    ]
+  }]
+}

@@ -2,7 +2,6 @@
 
 var path = require('path');
 
-
 /**
  * Figure out a shortcut icon, and whether it is external or a local
  * file to copy.
@@ -20,7 +19,7 @@ var path = require('path');
  *       "path": "only for internal, file absolute path"
  *     }
  */
-module.exports = function (ctx) {
+module.exports = function shortcutIcon(ctx) {
   var icon = ctx.view.shortcutIcon;
 
   if (!icon) {
@@ -28,7 +27,7 @@ module.exports = function (ctx) {
   }
 
   if (/^([a-z]+:)?\/\//.test(icon)) {
-    // External URL
+    // External URL.
     ctx.shortcutIcon = {type: 'external', url: icon};
     return;
   }

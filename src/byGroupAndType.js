@@ -1,18 +1,17 @@
 'use strict';
 
-var eachItem = require('./eachItem');
-
-module.exports = function (data){
+module.exports = function byGroupAndType(data) {
   var byGroupAndType = {};
 
-  eachItem(data, function (item, type){
+  data.forEach(function (item) {
     var group = item.group[0];
+    var type = item.context.type;
 
-    if (byGroupAndType[group] === undefined) {
+    if (!(group in byGroupAndType)) {
       byGroupAndType[group] = {};
     }
 
-    if (!Array.isArray(byGroupAndType[group][type])){
+    if (!(type in byGroupAndType[group])) {
       byGroupAndType[group][type] = [];
     }
 

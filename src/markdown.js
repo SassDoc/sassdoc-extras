@@ -2,11 +2,7 @@
 
 var marked = require('marked');
 
-module.exports = function (ctx) {
-
-  if (ctx.package && ctx.package.description) {
-    ctx.package.description = marked(ctx.package.description);
-  }
+module.exports = function markdown(ctx) {
 
   /**
    * Wrapper for `marked` that takes only one argument to avoid
@@ -30,62 +26,61 @@ module.exports = function (ctx) {
     };
   }
 
-  for (var type in ctx.data) {
-    for (var name in ctx.data[type]) {
-      var item = ctx.data[type][name];
-
-      if ('description' in item) {
-        item.description = marked(item.description);
-      }
-
-      if ('content' in item && item.content.description) {
-        item.content.description = marked(item.content.description);
-      }
-
-      if ('return' in item && item.return.description) {
-        item.return.description = marked(item.return.description);
-      }
-
-      if ('deprecated' in item) {
-        item.deprecated = marked(item.deprecated);
-      }
-
-
-      if ('author' in item) {
-        item.author = item.author.map(md);
-      }
-
-      if ('throw' in item) {
-        item.throw = item.throw.map(md);
-      }
-
-      if ('todo' in item) {
-        item.todo = item.todo.map(md);
-      }
-
-      if ('example' in item) {
-        item.example = item.example.map(
-          applyKey(md, 'description')
-        );
-      }
-
-      if ('parameter' in item) {
-        item.parameter = item.parameter.map(
-          applyKey(md, 'description')
-        );
-      }
-
-      if ('property' in item) {
-        item.property = item.property.map(
-          applyKey(md, 'description')
-        );
-      }
-
-      if ('since' in item) {
-        item.since = item.content.map(
-          applyKey(md, 'description')
-        );
-      }
-    }
+  if (ctx.package && ctx.package.description) {
+    ctx.package.description = md(ctx.package.description);
   }
+
+  ctx.data.forEach(function (item) {
+    if ('description' in item) {
+      item.description = marked(item.description);
+    }
+
+    if ('content' in item && item.content.description) {
+      item.content.description = marked(item.content.description);
+    }
+
+    if ('return' in item && item.return.description) {
+      item.return.description = marked(item.return.description);
+    }
+
+    if ('deprecated' in item) {
+      item.deprecated = marked(item.deprecated);
+    }
+
+    if ('author' in item) {
+      item.author = item.author.map(md);
+    }
+
+    if ('throw' in item) {
+      item.throw = item.throw.map(md);
+    }
+
+    if ('todo' in item) {
+      item.todo = item.todo.map(md);
+    }
+
+    if ('example' in item) {
+      item.example = item.example.map(
+        applyKey(md, 'description')
+      );
+    }
+
+    if ('parameter' in item) {
+      item.parameter = item.parameter.map(
+        applyKey(md, 'description')
+      );
+    }
+
+    if ('property' in item) {
+      item.property = item.property.map(
+        applyKey(md, 'description')
+      );
+    }
+
+    if ('since' in item) {
+      item.since = item.content.map(
+        applyKey(md, 'description')
+      );
+    }
+  });
 };

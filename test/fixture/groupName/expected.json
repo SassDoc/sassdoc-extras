@@ -1,75 +1,53 @@
 {
-  "view": {
-    "display": {
-      "access": [
-        "public",
-        "private"
-      ],
-      "alias": true,
-      "watermark": true
-    },
-    "groups": {
-      "undefined": "Ungrouped",
-      "foo": "Foo group",
-      "bar": "Bar group"
-    },
-    "theme": "default"
-  },
-  "data": {
-    "function": {
-      "test-func-group-undef": {
-        "description": "Test: function group undefined.\n",
-        "context": {
-          "type": "function",
-          "name": "test-func-group-undef"
-        },
-        "group": [
-          "undefined"
-        ],
-        "access": [
-          "public"
-        ],
-        "groupName": {
-          "undefined": "Ungrouped"
-        }
-      },
-      "test-func-group-foo": {
-        "description": "Test: function group foo.\n",
-        "context": {
-          "type": "function",
-          "name": "test-func-group-foo"
-        },
-        "group": [
-          "foo"
-        ],
-        "access": [
-          "public"
-        ],
-        "groupName": {
-          "foo": "Foo group"
-        }
-      },
-      "test-func-group-bar": {
-        "description": "Test: function group bar.\n",
-        "context": {
-          "type": "function",
-          "name": "test-func-group-bar"
-        },
-        "group": [
-          "bar"
-        ],
-        "access": [
-          "public"
-        ],
-        "groupName": {
-          "bar": "Bar group"
-        }
-      }
-    }
-  },
   "groups": {
     "undefined": "Ungrouped",
     "foo": "Foo group",
     "bar": "Bar group"
-  }
+  },
+  "data": [{
+    "description": "Test: function group undefined.\n",
+    "context": {
+      "type": "function",
+      "name": "test-func-group-undef"
+    },
+    "group": [
+      "undefined"
+    ],
+    "access": [
+      "public"
+    ],
+    "groupName": {
+      "undefined": "Ungrouped"
+    }
+  }, {
+    "description": "Test: function group foo.\n",
+    "context": {
+      "type": "function",
+      "name": "test-func-group-foo"
+    },
+    "group": [
+      "foo"
+    ],
+    "access": [
+      "public"
+    ],
+    "groupName": {
+      "foo": "Foo group"
+    }
+  }, {
+    "description": "Test: function group bar.\n",
+    "context": {
+      "type": "function",
+      "name": "test-func-group-bar"
+    },
+    "group": [
+      "bar"
+    ],
+    "access": [
+      "public"
+    ],
+    "groupName": {
+      "bar": "Bar group"
+    }
+  }]
 }

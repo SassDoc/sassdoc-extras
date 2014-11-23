@@ -6,22 +6,17 @@ describe('#byType', function () {
   var indexByType = require('../src/byType');
 
   it('should group by type', function () {
-    var data = {
-      'function': {
-        'name': {
-          'name': 'name',
-        },
-      },
-      'mixin': {
-        'name': {
-          'name': 'name',
-        },
-      },
-    };
+    var data = [{
+      'name': 'name',
+      'context': {'type': 'function'}
+    }, {
+      'name': 'name',
+      'context': {'type': 'mixin'}
+    }];
 
     var expected = {
-      'function': [{'name': 'name'}],
-      'mixin': [{'name': 'name'}],
+      'function': [{'name': 'name', 'context': {'type': 'function'}}],
+      'mixin': [{'name': 'name', 'context': {'type': 'mixin'}}],
     };
 
     assert.deepEqual(indexByType(data), expected);
