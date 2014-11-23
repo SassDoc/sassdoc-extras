@@ -5,11 +5,11 @@
  * configuration.
  */
 module.exports = function display(ctx) {
-  ctx.data = ctx.data.filter(function (item) {
+  ctx.data.forEach(function (item) {
     var displayItemAccess = ctx.display.access.indexOf(item.access) !== -1;
     var isAlias = item.alias;
     var displayAlias = ctx.display.alias;
 
-    return displayItemAccess && !(isAlias && !displayAlias);
+    item.display = displayItemAccess && !(isAlias && !displayAlias);
   });
 };
