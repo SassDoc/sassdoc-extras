@@ -6,7 +6,7 @@ var path = require('path');
  * Figure out a shortcut icon, and whether it is external or a local
  * file to copy.
  *
- * You can specify a local or external URL in `ctx.view.shortcutIcon`.
+ * You can specify a local or external URL in `ctx.shortcutIcon`.
  *
  * For a local file, it will be relative to `ctx.dir`.
  *
@@ -20,7 +20,7 @@ var path = require('path');
  *     }
  */
 module.exports = function shortcutIcon(ctx) {
-  var icon = ctx.view.shortcutIcon;
+  var icon = ctx.shortcutIcon;
 
   if (!icon) {
     return;
