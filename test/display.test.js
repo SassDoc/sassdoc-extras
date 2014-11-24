@@ -8,6 +8,7 @@ describe('#display', function () {
 
   var input = require('./fixture/display/input');
   var expected = require('./fixture/display/expected');
+
   display(input);
 
   it('should match expected ctx', function () {
