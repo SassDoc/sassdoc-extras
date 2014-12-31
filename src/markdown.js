@@ -78,7 +78,7 @@ module.exports = function markdown(ctx) {
     }
 
     if ('since' in item) {
-      item.since = item.content.map(
+      item.since = item.since.map(
         applyKey(md, 'description')
       );
     }
