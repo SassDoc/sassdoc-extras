@@ -35,6 +35,10 @@ module.exports = function markdown(ctx) {
       item.description = marked(item.description);
     }
 
+    if ('output' in item) {
+      item.output = marked(item.output);
+    }
+
     if ('content' in item && item.content.description) {
       item.content.description = marked(item.content.description);
     }

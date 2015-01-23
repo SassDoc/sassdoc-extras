@@ -4,6 +4,7 @@
    },
    "data": [{
     "description": "<p>Test: function markdown.</p>\n",
+    "output": "<p>Markdown output</p>\n",
     "deprecated": "<p>deprecated</p>\n",
     "context": {
       "type": "function",
