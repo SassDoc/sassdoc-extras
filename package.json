@@ -1,12 +1,14 @@
 {
   "name": "sassdoc-extras",
   "description": "SassDoc's Toolbelt",
-  "version": "2.0.0-rc.10",
+  "version": "2.0.0",
 
   "keywords": [
     "sassdoc",
     "index",
-    "themes"
+    "themes",
+    "extras",
+    "tools"
   ],
 
   "homepage": "http://sassdoc.com",
