@@ -1,10 +1,18 @@
 'use strict';
 
-module.exports = {
-  byGroupAndType : require('./src/byGroupAndType'),
-  byType : require('./src/byType.js'),
-  markdown: require('./src/markdown'),
-  display: require('./src/display'),
-  groupName: require('./src/groupName'),
-  shortcutIcon: require('./src/shortcutIcon'),
+module.exports = exports = function (ctx) {
+  for (var i = 1; i < arguments.length; ++i) {
+    exports[name](ctx);
+  }
 };
+
+[
+  'byGroupAndType',
+  'byType',
+  'markdown',
+  'display',
+  'groupName',
+  'shortcutIcon',
+].forEach(function (name) {
+  exports[name] = require('./src/' + name);
+});
