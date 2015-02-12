@@ -2,7 +2,7 @@
 
 module.exports = exports = function (ctx) {
   for (var i = 1; i < arguments.length; ++i) {
-    exports[name](ctx);
+    exports[arguments[i]](ctx);
   }
 };
 
