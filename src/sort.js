@@ -20,17 +20,17 @@ module.exports = function display(ctx) {
  */
 function compareData(sort) {
   return function (a, b) {
-    for (var i = 0; i < sort; ++i) {
+    for (var i = 0; i < sort.length; ++i) {
       var parts = parseCriteria(sort[i]);
       var key = parts[0];
-      var invert = parts[1];
+      var desc = parts[1];
 
       var comparison = compare(
         getComparisonValue(key, a),
         getComparisonValue(key, b)
       );
 
-      if (invert) {
+      if (desc) {
         comparison = invert(comparison);
       }
 
