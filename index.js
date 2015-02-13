@@ -7,10 +7,11 @@ module.exports = exports = function (ctx) {
 };
 
 [
-  'byGroupAndType',
-  'byType',
+  'description',
   'markdown',
   'display',
+  'byGroupAndType',
+  'byType',
   'groupName',
   'shortcutIcon',
 ].forEach(function (name) {
