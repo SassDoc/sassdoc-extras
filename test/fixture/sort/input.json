@@ -1,0 +1,10 @@
+{
+  "sort": ["group<", "file", "line>", "access"],
+  "data": [
+    { "group": ["foo"], "file": { "path": "foo2.scss" }, "context": { "line": { "start": 15 } }, "access": "public" },
+    { "group": ["bar"], "file": { "path": "bar.scss" }, "context": { "line": { "start": 5 } }, "access": "public" },
+    { "group": ["foo"], "file": { "path": "foo.scss" }, "context": { "line": { "start": 10 } }, "access": "private" },
+    { "group": ["bar"], "file": { "path": "bar.scss" }, "context": { "line": { "start": 10 } }, "access": "public" },
+    { "group": ["bar"], "file": { "path": "bar.scss" }, "context": { "line": { "start": 5 } }, "access": "private" }
+  ]
+}
