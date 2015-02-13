@@ -13,6 +13,7 @@ module.exports = exports = function (ctx) {
   'display',
   'groupName',
   'shortcutIcon',
+  'sort',
 ].forEach(function (name) {
   exports[name] = require('./src/' + name);
 });
