@@ -6,7 +6,7 @@
   "forin"        : false,
   "immed"        : true,
   "indent"       : 2,
-  "latedef"      : true,
+  "latedef"      : false,
   "maxcomplexity": 30,
   "maxdepth"     : false,
   "maxerr"       : 10000,
@@ -28,5 +28,6 @@
   "undef"        : true,
   "unused"       : true,
   "node"         : true,
-  "expr"         : true
+  "expr"         : true,
+  "mocha"        : true
 }

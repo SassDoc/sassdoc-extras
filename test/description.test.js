@@ -1,4 +1,3 @@
-/* global describe, it */
 'use strict';
 
 var fs = require('fs');
@@ -7,10 +6,9 @@ var assert = require('assert');
 
 var read = function(p) {
   return fs.readFileSync(path.join(__dirname, p), { encoding: 'utf8' });
-}
+};
 
 describe('#description', function () {
-  var input = read('./fixture/description/input.md');
   var expected = read('./fixture/description/expected.md');
   expected = expected.trim();
 

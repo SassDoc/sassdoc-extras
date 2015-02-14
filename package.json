@@ -2,7 +2,6 @@
   "name": "sassdoc-extras",
   "description": "SassDoc's Toolbelt",
   "version": "2.2.1",
-
   "keywords": [
     "sassdoc",
     "index",
@@ -10,37 +9,32 @@
     "extras",
     "tools"
   ],
-
   "homepage": "http://sassdoc.com",
-
   "repository": {
     "type": "git",
     "url": "https://github.com/SassDoc/sassdoc-extra.git"
   },
-
   "bugs": {
     "url": "https://github.com/SassDoc/sassdoc-extra/issues"
   },
-
   "license": "MIT",
-
   "files": [
     "src",
     "index.js",
     "LICENSE.md",
     "README.md"
   ],
-
   "dependencies": {
     "marked": "^0.3.0",
     "lodash.foreach": "^2.4.1"
   },
-
   "devDependencies": {
+    "jshint": "^2.6.0",
     "mocha": "^1.21.4"
   },
-
   "scripts": {
+    "lint": "jshint index.js src/*.js test/*.js --verbose",
+    "pretest": "npm run lint",
     "test": "mocha test/*.test.js"
   }
 }
