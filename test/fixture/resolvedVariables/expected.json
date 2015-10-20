@@ -1,0 +1,121 @@
+{
+  "data": [
+    {
+      "description": "<p>Blue</p>\n",
+      "context": {
+        "type": "variable",
+        "name": "color-blue",
+        "value": "blue"
+      },
+      "type": "Color",
+      "resolvedValue": "blue"
+    },
+    {
+      "description": "<p>Red</p>\n",
+      "context": {
+        "type": "variable",
+        "name": "color-red",
+        "value": "red"
+      },
+      "type": "Color",
+      "resolvedValue": "red"
+    },
+    {
+      "description": "<p>Main color</p>\n",
+      "context": {
+        "type": "variable",
+        "name": "color-main",
+        "value": "$color-blue"
+      },
+      "type": "Color",
+      "resolvedValue": "blue"
+    },
+    {
+      "description": "<p>Alt color</p>\n",
+      "context": {
+        "type": "variable",
+        "name": "color-alt",
+        "value": "$color-red"
+      },
+      "type": "Color",
+      "resolvedValue": "red"
+    },
+    {
+      "description": "<p>Colors map</p>\n",
+      "context": {
+        "type": "variable",
+        "name": "colors-map",
+        "value": "(\n  'green': green,\n  'yellow': yellow,\n  'blue': $color-blue,\n  'red': $color-red,\n  'main': $color-main,\n  'alt': $color-alt,\n)"
+      },
+      "type": "Map",
+      "property": [
+        {
+          "type": "Color",
+          "name": "$colors-map.green",
+          "default": "green",
+          "description": "<p>A color</p>\n",
+          "resolvedValue": "green"
+        },
+        {
+          "type": "Color",
+          "name": "$colors-map.yellow",
+          "default": "yellow",
+          "description": "<p>A color</p>\n",
+          "resolvedValue": "yellow"
+        },
+        {
+          "type": "Color",
+          "name": "$colors-map.blue",
+          "default": "$color-blue",
+          "description": "<p>A color</p>\n",
+          "resolvedValue": "blue"
+        },
+        {
+          "type": "Color",
+          "name": "$colors-map.red",
+          "default": "$color-red",
+          "description": "<p>A color</p>\n",
+          "resolvedValue": "red"
+        },
+        {
+          "type": "Color",
+          "name": "$colors-map.main",
+          "default": "$color-main",
+          "description": "<p>A color</p>\n",
+          "resolvedValue": "blue"
+        },
+        {
+          "type": "Color",
+          "name": "$colors-map.alt",
+          "default": "$color-alt",
+          "description": "<p>A color</p>\n",
+          "resolvedValue": "red"
+        }
+      ],
+      "resolvedValue": "(\n  'green': green,\n  'yellow': yellow,\n  'blue': $color-blue,\n  'red': $color-red,\n  'main': $color-main,\n  'alt': $color-alt,\n)"
+    },
+    {
+      "description": "<p>A mixin test</p>\n",
+      "context": {
+        "type": "mixin",
+        "name": "test"
+      },
+      "parameter": [
+        {
+          "type": "Color",
+          "name": "color",
+          "default": "$color-main",
+          "description": "<p>a desc</p>\n",
+          "resolvedValue": "blue"
+        },
+        {
+          "type": "Color",
+          "name": "background",
+          "default": "$color-alt",
+          "description": "<p>a desc</p>\n",
+          "resolvedValue": "red"
+        }
+      ]
+    }
+  ]
+}
