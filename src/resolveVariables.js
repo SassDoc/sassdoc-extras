@@ -3,7 +3,7 @@
 /**
  * Resolve variables aliases.
  */
-module.exports = function variablesAliases(ctx) {
+module.exports = function resolveVariables(ctx) {
   var cache = {};
 
   ctx.data
