@@ -15,6 +15,7 @@ module.exports = exports = function (ctx) {
   'groupName',
   'shortcutIcon',
   'sort',
+  'resolveVariables',
 ].forEach(function (name) {
   exports[name] = require('./src/' + name);
 });
