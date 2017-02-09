@@ -1,5 +1,7 @@
 # SassDoc Extras [![npm version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/SassDoc/sassdoc-extras.svg)](https://greenkeeper.io/)
+
 Extra tools for SassDoc theme authors. See [documentation](http://sassdoc.com/extra-tools/).
 
 [npm-url]: https://www.npmjs.org/package/sassdoc-extras
