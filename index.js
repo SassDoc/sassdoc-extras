@@ -1,12 +1,12 @@
-'use strict';
+'use strict'
 
 module.exports = exports = function (ctx) {
   for (var i = 1; i < arguments.length; ++i) {
-    exports[arguments[i]](ctx);
+    exports[arguments[i]](ctx)
   }
-};
+}
 
-[
+var extras = [
   'description',
   'markdown',
   'display',
@@ -15,7 +15,9 @@ module.exports = exports = function (ctx) {
   'groupName',
   'shortcutIcon',
   'sort',
-  'resolveVariables',
-].forEach(function (name) {
-  exports[name] = require('./src/' + name);
-});
+  'resolveVariables'
+]
+
+extras.forEach(function (name) {
+  exports[name] = require('./src/' + name)
+})

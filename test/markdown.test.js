@@ -1,15 +1,14 @@
-'use strict';
+'use strict'
 
-var assert = require('assert');
+var assert = require('assert')
 
 describe('#markdown', function () {
-  var input = require('./fixture/markdown/input');
-  var expected = require('./fixture/markdown/expected');
+  var input = require('./fixture/markdown/input')
+  var expected = require('./fixture/markdown/expected')
 
-  require('../').markdown(input);
+  require('../').markdown(input)
 
   it('should match expected ctx', function () {
-    assert.deepEqual(input, expected);
-  });
-
-});
+    assert.deepEqual(input, expected)
+  })
+})
