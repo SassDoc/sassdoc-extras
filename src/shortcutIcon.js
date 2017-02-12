@@ -1,6 +1,6 @@
-'use strict';
+'use strict'
 
-var path = require('path');
+var path = require('path')
 
 /**
  * Figure out a shortcut icon, and whether it is external or a local
@@ -19,22 +19,26 @@ var path = require('path');
  *       "path": "only for internal, file absolute path"
  *     }
  */
-module.exports = function shortcutIcon(ctx) {
-  var icon = ctx.shortcutIcon;
+module.exports = function shortcutIcon (ctx) {
+  var icon = ctx.shortcutIcon
 
   if (!icon) {
-    return;
+    return
   }
 
   if (/^([a-z]+:)?\/\//.test(icon)) {
     // External URL.
-    ctx.shortcutIcon = {type: 'external', url: icon};
-    return;
+    ctx.shortcutIcon = {
+      type: 'external',
+      url: icon
+    }
+
+    return
   }
 
   ctx.shortcutIcon = {
     type: 'internal',
     url: path.basename(icon),
-    path: path.resolve(ctx.dir, icon),
-  };
-};
+    path: path.resolve(ctx.dir, icon)
+  }
+}

@@ -1,9 +1,9 @@
-'use strict';
+'use strict'
 
-var assert = require('assert');
+var assert = require('assert')
 
 describe('#byType', function () {
-  var indexByType = require('../src/byType');
+  var indexByType = require('../src/byType')
 
   it('should group by type', function () {
     var data = [{
@@ -12,13 +12,13 @@ describe('#byType', function () {
     }, {
       'name': 'name',
       'context': {'type': 'mixin'}
-    }];
+    }]
 
     var expected = {
       'function': [{'name': 'name', 'context': {'type': 'function'}}],
-      'mixin': [{'name': 'name', 'context': {'type': 'mixin'}}],
-    };
+      'mixin': [{'name': 'name', 'context': {'type': 'mixin'}}]
+    }
 
-    assert.deepEqual(indexByType(data), expected);
-  });
-});
+    assert.deepEqual(indexByType(data), expected)
+  })
+})

@@ -1,17 +1,16 @@
-'use strict';
+'use strict'
 
-var assert = require('assert');
+var assert = require('assert')
 
 describe('#display', function () {
-  var display = require('../').display;
+  var display = require('../').display
 
-  var input = require('./fixture/display/input');
-  var expected = require('./fixture/display/expected');
+  var input = require('./fixture/display/input')
+  var expected = require('./fixture/display/expected')
 
-  display(input);
+  display(input)
 
   it('should match expected ctx', function () {
-    assert.deepEqual(input, expected);
-  });
-
-});
+    assert.deepEqual(input, expected)
+  })
+})

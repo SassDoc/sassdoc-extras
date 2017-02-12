@@ -1,11 +1,11 @@
-'use strict';
+'use strict'
 
-var assert = require('assert');
+var assert = require('assert')
 
 describe('#byGroupAndType', function () {
-  var indexByGroupAndType = require('../src/byGroupAndType');
+  var indexByGroupAndType = require('../src/byGroupAndType')
 
-  it('should group by group name and type', function(){
+  it('should group by group name and type', function () {
     var data = [{
       'name': 'name',
       'context': {'type': 'function'},
@@ -22,7 +22,7 @@ describe('#byGroupAndType', function () {
       'name': 'name1',
       'context': {'type': 'mixin'},
       'group': ['nogroup']
-    }];
+    }]
 
     var expected = {
       'nogroup': {
@@ -33,8 +33,8 @@ describe('#byGroupAndType', function () {
         'function': [{'name': 'name', 'context': {'type': 'function'}, 'group': ['test']}],
         'mixin': [{'name': 'name', 'context': {'type': 'mixin'}, 'group': ['test']}]
       }
-    };
+    }
 
-    assert.deepEqual(indexByGroupAndType(data), expected);
-  });
-});
+    assert.deepEqual(indexByGroupAndType(data), expected)
+  })
+})

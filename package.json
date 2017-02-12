@@ -28,12 +28,17 @@
     "marked": "^0.3.0"
   },
   "devDependencies": {
-    "jshint": "^2.6.0",
-    "mocha": "^3.2.0"
+    "mocha": "^3.2.0",
+    "standard": "^8.6.0"
   },
   "scripts": {
-    "lint": "jshint index.js src/*.js test/*.js --verbose",
+    "lint": "standard index.js src/*.js test/*.js --verbose",
     "pretest": "npm run lint",
     "test": "mocha test/*.test.js"
+  },
+  "standard": {
+    "env": {
+      "mocha": true
+    }
   }
 }
