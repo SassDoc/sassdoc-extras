@@ -28,7 +28,7 @@
     "marked": "^0.3.0"
   },
   "devDependencies": {
-    "mocha": "^3.2.0",
+    "mocha": "^4.0.0",
     "standard": "^10.0.0"
   },
   "scripts": {
