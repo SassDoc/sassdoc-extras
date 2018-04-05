@@ -12,10 +12,10 @@
   "homepage": "http://sassdoc.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SassDoc/sassdoc-extra.git"
+    "url": "https://github.com/SassDoc/sassdoc-extras.git"
   },
   "bugs": {
-    "url": "https://github.com/SassDoc/sassdoc-extra/issues"
+    "url": "https://github.com/SassDoc/sassdoc-extras/issues"
   },
   "license": "MIT",
   "files": [
