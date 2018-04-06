@@ -45,19 +45,27 @@ function compareData (sort) {
 
 function getComparisonValue (key, item) {
   switch (key) {
-    case 'group': return item.group[0].toLowerCase()
-    case 'file': return item.file.path
-    case 'line': return item.context.line.start
-    case 'access': return parseAccess(item.access)
-    default: throw new Error('Unknown sort criteria `' + key + '`')
+    case 'group':
+      return item.group[0].toLowerCase()
+    case 'file':
+      return item.file.path
+    case 'line':
+      return item.context.line.start
+    case 'access':
+      return parseAccess(item.access)
+    default:
+      throw new Error('Unknown sort criteria `' + key + '`')
   }
 }
 
 function parseAccess (access) {
   switch (access) {
-    case 'public': return 1
-    case 'private': return 2
-    default: return 3
+    case 'public':
+      return 1
+    case 'private':
+      return 2
+    default:
+      return 3
   }
 }
 
@@ -82,8 +90,11 @@ function invert (comparison) {
 
 function compare (a, b) {
   switch (true) {
-    case a > b: return 1
-    case a === b: return 0
-    default: return -1
+    case a > b:
+      return 1
+    case a === b:
+      return 0
+    default:
+      return -1
   }
 }

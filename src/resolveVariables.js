@@ -6,11 +6,9 @@
 module.exports = function resolveVariables (ctx) {
   var cache = {}
 
-  ctx.data
-    .filter(isVariable)
-    .forEach(function (item) {
-      cache[item.context.name] = item.context.value
-    })
+  ctx.data.filter(isVariable).forEach(function (item) {
+    cache[item.context.name] = item.context.value
+  })
 
   for (var item in cache) {
     var value = variableValue(cache[item])
@@ -20,28 +18,27 @@ module.exports = function resolveVariables (ctx) {
     }
   }
 
-  ctx.data
-    .forEach(function (item) {
-      if (isVariable(item)) {
-        item.resolvedValue = cache[item.context.name]
-      }
+  ctx.data.forEach(function (item) {
+    if (isVariable(item)) {
+      item.resolvedValue = cache[item.context.name]
+    }
 
-      if (item.property) {
-        item.property.forEach(function (prop) {
-          var value = variableValue(prop.default)
+    if (item.property) {
+      item.property.forEach(function (prop) {
+        var value = variableValue(prop.default)
 
-          prop.resolvedValue = value ? cache[value[1]] : prop.default
-        })
-      }
+        prop.resolvedValue = value ? cache[value[1]] : prop.default
+      })
+    }
 
-      if (item.parameter) {
-        item.parameter.forEach(function (param) {
-          var value = variableValue(param.default)
+    if (item.parameter) {
+      item.parameter.forEach(function (param) {
+        var value = variableValue(param.default)
 
-          param.resolvedValue = value ? cache[value[1]] : param.default
-        })
-      }
-    })
+        param.resolvedValue = value ? cache[value[1]] : param.default
+      })
+    }
+  })
 }
 
 /**
@@ -50,8 +47,10 @@ module.exports = function resolveVariables (ctx) {
  * @return {Boolean}
  */
 function isVariable (item) {
-  return typeof item.context.type === 'string' &&
-         item.context.type.toLowerCase() === 'variable'
+  return (
+    typeof item.context.type === 'string' &&
+    item.context.type.toLowerCase() === 'variable'
+  )
 }
 
 /**

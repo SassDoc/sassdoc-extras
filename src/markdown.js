@@ -67,27 +67,19 @@ module.exports = function markdown (ctx) {
     }
 
     if ('example' in item) {
-      item.example = item.example.map(
-        applyKey(md, 'description')
-      )
+      item.example = item.example.map(applyKey(md, 'description'))
     }
 
     if ('parameter' in item) {
-      item.parameter = item.parameter.map(
-        applyKey(md, 'description')
-      )
+      item.parameter = item.parameter.map(applyKey(md, 'description'))
     }
 
     if ('property' in item) {
-      item.property = item.property.map(
-        applyKey(md, 'description')
-      )
+      item.property = item.property.map(applyKey(md, 'description'))
     }
 
     if ('since' in item) {
-      item.since = item.since.map(
-        applyKey(md, 'description')
-      )
+      item.since = item.since.map(applyKey(md, 'description'))
     }
   })
 }

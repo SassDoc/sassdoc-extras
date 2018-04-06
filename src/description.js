@@ -23,9 +23,10 @@ function tryLoadFile (ctx) {
     return fs.readFileSync(filePath, { encoding: 'utf8' })
   } catch (e) {
     if (e.code === 'ENOENT') {
-      ctx.emit('warning', new Error(
-        s('Description file not found: `%s` given.', desc)
-      ))
+      ctx.emit(
+        'warning',
+        new Error(s('Description file not found: `%s` given.', desc))
+      )
     } else {
       ctx.emit('warning', e)
     }
