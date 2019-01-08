@@ -4,10 +4,11 @@
  * Compute a `groupName` object from `group` array with slug as key and
  * title as value.
  *
- * Also compute a `groups` property in `ctx`.
+ * Also compute a `groups` and `groupDescriptions` properties in `ctx`.
  */
 module.exports = function groupName (ctx) {
   ctx.groups = ctx.groups || {}
+  ctx.groupDescriptions = ctx.groupDescriptions || {}
 
   // Lowercase the slugs.
   Object.keys(ctx.groups).forEach(function (slug) {
@@ -26,6 +27,7 @@ module.exports = function groupName (ctx) {
         group[slug] = ctx.groups[slug] = slug
       }
     })
+    Object.assign(ctx.groupDescriptions, item.groupDescriptions)
 
     item.groupName = group
   })
