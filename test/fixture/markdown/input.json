@@ -37,6 +37,9 @@
     },
     "content": {
       "description": "This should be parsed as Markdown"
+    },
+    "groupDescriptions": {
+      "group": "description"
     }
   }]
 }
