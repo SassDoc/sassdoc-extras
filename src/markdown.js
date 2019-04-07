@@ -81,5 +81,11 @@ module.exports = function markdown (ctx) {
     if ('since' in item) {
       item.since = item.since.map(applyKey(md, 'description'))
     }
+
+    if ('groupDescriptions' in item) {
+      for (let k of Object.keys(item.groupDescriptions)) {
+        item.groupDescriptions[k] = marked(item.groupDescriptions[k])
+      }
+    }
   })
 }

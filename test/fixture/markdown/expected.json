@@ -34,6 +34,9 @@
     },
     "content": {
       "description": "<p>This should be parsed as Markdown</p>\n"
+    },
+    "groupDescriptions": {
+      "group": "<p>description</p>\n"
     }
   }]
 }

@@ -4,6 +4,10 @@
     "foo": "Foo group",
     "bar": "Bar group"
   },
+  "groupDescriptions": {
+    "foo": "description",
+    "bar": "description"
+  },
   "data": [{
     "description": "Test: function group undefined.\n",
     "context": {
@@ -28,6 +32,9 @@
     "group": [
       "foo"
     ],
+    "groupDescriptions": {
+      "foo": "description"
+    },
     "access": [
       "public"
     ],
@@ -43,6 +50,9 @@
     "group": [
       "bar"
     ],
+    "groupDescriptions": {
+      "bar": "description"
+    },
     "access": [
       "public"
     ],

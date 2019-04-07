@@ -25,6 +25,9 @@
     "group": [
       "foo"
     ],
+    "groupDescriptions": {
+      "foo": "description"
+    },
     "access": [
       "public"
     ]
@@ -37,6 +40,9 @@
     "group": [
       "bar"
     ],
+    "groupDescriptions": {
+      "bar": "description"
+    },
     "access": [
       "public"
     ]
