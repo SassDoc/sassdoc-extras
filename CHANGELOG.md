@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [3.0.0] - 2020-01-01
+### Changed
+  * Upgrade `marked` to version `0.8.x`.
+    Remove support for Node.js version lower than 8.
+
 ## [2.5.1] - 2019-0--28
 ### Fixed
   * Upgrade `marked` dependency due to security issues.
@@ -15,7 +20,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
   * Add group description preprocessing.
 
-[Unreleased]: https://github.com/sassdoc/sassdoc-extras/compare/2.5.1...HEAD
+[Unreleased]: https://github.com/sassdoc/sassdoc-extras/compare/3.0.0...HEAD
+[3.0.0]: https://github.com/sassdoc/sassdoc-extras/tags/3.0.0
 [2.5.1]: https://github.com/sassdoc/sassdoc-extras/tags/2.5.1
 [2.5.0]: https://github.com/sassdoc/sassdoc-extras/tags/2.5.0
 [2.4.3]: https://github.com/sassdoc/sassdoc-extras/tags/2.4.3
