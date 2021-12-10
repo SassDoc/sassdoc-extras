@@ -21,7 +21,7 @@ describe('#description', function () {
   it('should resolve and load a description file', function () {
     require('../')(ctx, 'description', 'markdown')
 
-    assert.equal(ctx.description, expected)
+    assert.equal(ctx.description.trim(), expected)
   })
 
   it('should not throw if description file is not found', function () {
