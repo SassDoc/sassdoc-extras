@@ -1,8 +1,8 @@
 'use strict'
 
-var fs = require('fs')
-var path = require('path')
-var s = require('util').format
+const fs = require('fs')
+const path = require('path')
+const s = require('util').format
 
 /**
  * Resolve and load a `descriptionPath` key from config.
@@ -16,8 +16,8 @@ module.exports = function description (ctx) {
 }
 
 function tryLoadFile (ctx) {
-  var desc = ctx.descriptionPath
-  var filePath = path.resolve(ctx.dir || process.cwd(), desc)
+  const desc = ctx.descriptionPath
+  const filePath = path.resolve(ctx.dir || process.cwd(), desc)
 
   try {
     return fs.readFileSync(filePath, { encoding: 'utf8' })

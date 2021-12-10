@@ -16,7 +16,7 @@ module.exports = function groupName (ctx) {
   })
 
   ctx.data.forEach(function (item) {
-    var group = {}
+    const group = {}
 
     item.group.forEach(function (slug) {
       slug = slug.toLowerCase()

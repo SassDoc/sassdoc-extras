@@ -1,12 +1,12 @@
 'use strict'
 
-var assert = require('assert')
+const assert = require('assert')
 
 describe('#byType', function () {
-  var indexByType = require('../src/byType')
+  const indexByType = require('../src/byType')
 
   it('should group by type', function () {
-    var data = [
+    const data = [
       {
         name: 'name',
         context: { type: 'function' }
@@ -17,7 +17,7 @@ describe('#byType', function () {
       }
     ]
 
-    var expected = {
+    const expected = {
       function: [{ name: 'name', context: { type: 'function' } }],
       mixin: [{ name: 'name', context: { type: 'mixin' } }]
     }

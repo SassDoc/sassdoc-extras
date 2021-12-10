@@ -1,12 +1,12 @@
 'use strict'
 
 module.exports = exports = function (ctx) {
-  for (var i = 1; i < arguments.length; ++i) {
+  for (let i = 1; i < arguments.length; ++i) {
     exports[arguments[i]](ctx)
   }
 }
 
-var extras = [
+const extras = [
   'description',
   'markdown',
   'display',

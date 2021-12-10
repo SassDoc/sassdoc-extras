@@ -1,12 +1,12 @@
 'use strict'
 
-var assert = require('assert')
+const assert = require('assert')
 
 describe('#display', function () {
-  var display = require('../').display
+  const display = require('../').display
 
-  var input = require('./fixture/display/input')
-  var expected = require('./fixture/display/expected')
+  const input = require('./fixture/display/input')
+  const expected = require('./fixture/display/expected')
 
   display(input)
 

@@ -1,10 +1,10 @@
 'use strict'
 
 module.exports = function byType (data) {
-  var sorted = {}
+  const sorted = {}
 
   data.forEach(function (item) {
-    var type = item.context.type
+    const type = item.context.type
 
     if (!(type in sorted)) {
       sorted[type] = []

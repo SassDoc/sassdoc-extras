@@ -83,7 +83,7 @@ module.exports = function markdown (ctx) {
     }
 
     if ('groupDescriptions' in item) {
-      for (let k of Object.keys(item.groupDescriptions)) {
+      for (const k of Object.keys(item.groupDescriptions)) {
         item.groupDescriptions[k] = marked(item.groupDescriptions[k])
       }
     }

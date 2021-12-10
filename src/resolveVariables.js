@@ -4,14 +4,14 @@
  * Resolve variables aliases.
  */
 module.exports = function resolveVariables (ctx) {
-  var cache = {}
+  const cache = {}
 
   ctx.data.filter(isVariable).forEach(function (item) {
     cache[item.context.name] = item.context.value
   })
 
-  for (var item in cache) {
-    var value = variableValue(cache[item])
+  for (const item in cache) {
+    const value = variableValue(cache[item])
 
     if (value) {
       cache[item] = cache[value[1]]
@@ -25,7 +25,7 @@ module.exports = function resolveVariables (ctx) {
 
     if (item.property) {
       item.property.forEach(function (prop) {
-        var value = variableValue(prop.default)
+        const value = variableValue(prop.default)
 
         prop.resolvedValue = value ? cache[value[1]] : prop.default
       })
@@ -33,7 +33,7 @@ module.exports = function resolveVariables (ctx) {
 
     if (item.parameter) {
       item.parameter.forEach(function (param) {
-        var value = variableValue(param.default)
+        const value = variableValue(param.default)
 
         param.resolvedValue = value ? cache[value[1]] : param.default
       })

@@ -1,12 +1,12 @@
 'use strict'
 
-var assert = require('assert')
+const assert = require('assert')
 
 describe('#resolveVariables', function () {
-  var resolveVariables = require('../').resolveVariables
+  const resolveVariables = require('../').resolveVariables
 
-  var input = require('./fixture/resolveVariables/input')
-  var expected = require('./fixture/resolveVariables/expected')
+  const input = require('./fixture/resolveVariables/input')
+  const expected = require('./fixture/resolveVariables/expected')
 
   resolveVariables(input)
 

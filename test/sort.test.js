@@ -1,12 +1,12 @@
 'use strict'
 
-var assert = require('assert')
+const assert = require('assert')
 
 describe('#sort', function () {
-  var sort = require('../').sort
+  const sort = require('../').sort
 
-  var input = require('./fixture/sort/input')
-  var expected = require('./fixture/sort/expected')
+  const input = require('./fixture/sort/input')
+  const expected = require('./fixture/sort/expected')
 
   sort(input)
 

@@ -20,12 +20,12 @@ module.exports = function display (ctx) {
  */
 function compareData (sort) {
   return function (a, b) {
-    for (var i = 0; i < sort.length; ++i) {
-      var parts = parseCriteria(sort[i])
-      var key = parts[0]
-      var desc = parts[1]
+    for (let i = 0; i < sort.length; ++i) {
+      const parts = parseCriteria(sort[i])
+      const key = parts[0]
+      const desc = parts[1]
 
-      var comparison = compare(
+      let comparison = compare(
         getComparisonValue(key, a),
         getComparisonValue(key, b)
       )
@@ -70,8 +70,8 @@ function parseAccess (access) {
 }
 
 function parseCriteria (key) {
-  var last = key[key.length - 1]
-  var invert = false
+  const last = key[key.length - 1]
+  let invert = false
 
   if (last === '<' || last === '>') {
     key = key.substr(0, key.length - 1)

@@ -1,12 +1,12 @@
 'use strict'
 
-var assert = require('assert')
+const assert = require('assert')
 
 describe('#byGroupAndType', function () {
-  var indexByGroupAndType = require('../src/byGroupAndType')
+  const indexByGroupAndType = require('../src/byGroupAndType')
 
   it('should group by group name and type', function () {
-    var data = [
+    const data = [
       {
         name: 'name',
         context: { type: 'function' },
@@ -29,7 +29,7 @@ describe('#byGroupAndType', function () {
       }
     ]
 
-    var expected = {
+    const expected = {
       nogroup: {
         function: [
           { name: 'name1', context: { type: 'function' }, group: ['nogroup'] }

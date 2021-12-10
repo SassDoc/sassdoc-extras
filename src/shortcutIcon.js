@@ -1,6 +1,6 @@
 'use strict'
 
-var path = require('path')
+const path = require('path')
 
 /**
  * Figure out a shortcut icon, and whether it is external or a local
@@ -20,7 +20,7 @@ var path = require('path')
  *     }
  */
 module.exports = function shortcutIcon (ctx) {
-  var icon = ctx.shortcutIcon
+  const icon = ctx.shortcutIcon
 
   if (!icon) {
     return
